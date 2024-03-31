@@ -10,6 +10,7 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.intellij.lang.annotations.RegExp;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;
@@ -39,16 +40,15 @@ public class User {
     @Column(name = "email")
     @NotNull
     @Size(max = 100)
-    @Valid
     @Email(message = "Email is not valid", regexp = "^[a-zA-Z0-9_!#$%&'*+/=?`{|}~^.-]+@[a-zA-Z0-9.-]+$")
     private String email;
 
     @Column(name = "telegram")
-    @Size(max = 100)
+    @Pattern(regexp = "^@([A-Za-z0-9_]{5,32})$", message = "Invalid Telegram account format")
     private String telegram;
 
     @Column(name = "phone")
-    @Size(min = 10, max = 10)
+    @Size(min = 11, max = 15)
     private String phone;
 
     @Column(name = "password")
