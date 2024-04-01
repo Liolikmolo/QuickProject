@@ -5,6 +5,8 @@ import java.util.List;
 import java.util.UUID;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Size;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -23,16 +25,21 @@ public class ProjectRole {
 
     @Id
     @Column(name = "id")
+    @NotNull
     private UUID id = UUID.randomUUID();
 
     @Column(name = "name")
+    @NotNull
+    @Size(min=5,max = 100)
     private String name;
 
     @Column(name = "description")
+    @Size(min=5,max = 1000)
     private String description;
 
     @ManyToOne
     @JoinColumn(name = "project_id")
+    @NotNull
     private Project project;
 
     @Builder.Default
@@ -41,6 +48,4 @@ public class ProjectRole {
 
     @OneToOne(mappedBy = "projectRole")
     private Queue queue;
-
-
 }
