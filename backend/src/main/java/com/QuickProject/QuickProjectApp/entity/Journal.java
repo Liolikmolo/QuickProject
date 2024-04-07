@@ -41,7 +41,7 @@ public class Journal {
     @NotNull
     private ProjectRole projectRole;
 
-    @Column(name = "addind_at")
+    @Column(name = "adding_at")
     @NotNull
     private LocalDateTime addind_at;
 
