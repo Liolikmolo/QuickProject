@@ -62,6 +62,4 @@ public class Project {
     @Builder.Default
     @OneToMany(mappedBy = "project")
     private List<ProjectRole> projectRoles = new ArrayList<>();
-
-
 }
