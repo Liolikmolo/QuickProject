@@ -1,0 +1,52 @@
+.btn {
+	&_primary {
+		width: 80px;
+		height: 44px;
+		padding: 10px 16px 10px 16px;
+		border-radius: 8px;
+		border: none;
+		background: rgb(99, 102, 241);
+		color: rgb(241, 245, 249);
+		font-size: 16px;
+		font-weight: 600;
+		line-height: 24px;
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+		&:hover {
+			background: rgb(67, 56, 202);
+			cursor: pointer;
+		}
+	}
+	&_card {
+		width: 173px;
+		height: 36px;
+		padding: 6px 12px 6px 12px;
+		background: rgb(99, 102, 241);
+		color: rgb(241, 245, 249);
+		font-size: 14px;
+		font-weight: 600;
+		line-height: 20px;
+	}
+	&_secondary {
+		width: 100px;
+		height: 40px;
+		padding: 10px 16px 10px 16px;
+		background: rgb(241, 245, 249);
+		color: rgb(15, 23, 42);
+		font-size: 16px;
+		font-weight: 600;
+		line-height: 24px;
+	}
+	&_tertiary {
+		width: 151px;
+		height: 40px;
+		border: 1px solid rgb(99, 102, 241);
+		border-radius: 8px;
+		color: rgb(99, 102, 241);
+		font-size: 14px;
+		font-weight: 600;
+		line-height: 20px;
+	}
+}
